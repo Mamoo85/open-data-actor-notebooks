@@ -1,0 +1,122 @@
+[
+ {
+  "slug": "fmcsa-new-carrier-leads",
+  "title": "FMCSA New Motor Carrier Leads",
+  "desc": "New motor carrier leads from the official FMCSA census: new USDOT/MC trucking companies with officer names, authority status, filed email and phone. Filter by state and fleet size; deduped, so daily runs only bill new carriers"
+ },
+ {
+  "slug": "warn-layoff-alerts",
+  "title": "WARN Layoff Notices API",
+  "desc": "WARN Act layoff notices from 7 official state sources (TX, CA, WA, OR, MD, VA, NC), verified by 89 passing tests. Clean rows: employer, workers affected, city, notice and layoff dates. Deduped across runs for scheduled alerts. CSV, JSON, API or webhook. $0.003 per notice"
+ },
+ {
+  "slug": "website-tech-stack-detector",
+  "title": "Website Tech Stack Lookup",
+  "desc": "2,392 technology fingerprints with version and confidence, tested on 19,393 checks. Find the CMS, ecommerce platform, frameworks, analytics, CDN and hosting any website uses. Bulk domains in, one row per site with evidence. $0.002 per site, no subscription; failed sites are free"
+ },
+ {
+  "slug": "ats-open-roles",
+  "title": "Career Site Jobs API",
+  "desc": "Career-site jobs at $0.002 each, with seniority, department and ready-made company presets. Open roles from the public job-board APIs of Greenhouse, Lever, Ashby, Workable, SmartRecruiters and Recruitee plus schema.org pages. One clean schema with salary, remote flag, apply URL"
+ },
+ {
+  "slug": "city-council-agendas",
+  "title": "City Council Meetings & Agendas",
+  "desc": "City council meetings and agenda items from 18 US cities via the official Legistar Web API. Meeting date and time, body, matter, status, action, vote result, agenda PDF and attachment links. Keyword filters, deduped alerts, 93 passing tests. $0.001 per item"
+ },
+ {
+  "slug": "company-enrichment-by-domain",
+  "title": "Company Enrichment by Domain",
+  "desc": "Company enrichment from each company's own site and DNS only, verified by 73 passing tests. Domains in; name, logo, description, socials, careers/ATS, business emails and phones, email provider (MX) and tech stack out. No login, no data brokers. $0.005 per domain"
+ },
+ {
+  "slug": "sec-form-d-funding-leads",
+  "title": "SEC Form D Startup Funding Leads",
+  "desc": "Startup funding leads from official SEC EDGAR Form D filings at $0.0025 per filing. Issuer, industry, offering size, amount sold, investors, first-sale date, officers. Filter by industry, state, size; exclude pooled funds; dedupe"
+ },
+ {
+  "slug": "technical-seo-page-audit",
+  "title": "Technical SEO Page Audit",
+  "desc": "Technical SEO audit verified by 130 passing tests: title, meta, canonical, H1-H3, internal/external and broken links, missing alt, Open Graph, hreflang, JSON-LD, redirect chain, TTFB, and a prioritised issues list with a score. Respects robots.txt. $0.003 per page"
+ },
+ {
+  "slug": "domain-intelligence-lookup",
+  "title": "Domain Intelligence",
+  "desc": "Bulk domain lookup verified by 94 passing tests: RDAP registration (registrar, created, expires, age), DNS over HTTPS (A, AAAA, MX, NS, TXT with SPF and DMARC parsed), subdomains from certificate transparency, SSL expiry and HTTP security headers. $0.002 per domain"
+ },
+ {
+  "slug": "new-business-filings",
+  "title": "New Business Filings",
+  "desc": "New LLCs and corporations from official state open data (CO, NY, OR, CT), verified by 57 passing tests. Name, filing date, type, status, registered agent, public address, source link. Filter by state, type, keyword; deduped across runs. No login. $0.004 per filing"
+ },
+ {
+  "slug": "app-store-reviews",
+  "title": "App Store Reviews Scraper",
+  "desc": "Apple App Store reviews at $0.50 per 1,000, verified by 85 passing tests. Review text, stars, app version, date, votes, plus rating, rating count, price, genre and release notes"
+ },
+ {
+  "slug": "website-contact-extractor",
+  "title": "Website Contact Details Scraper",
+  "desc": "Website contact extractor: get emails, phone numbers and social media profiles from any list of business websites. One clean row per site with role/named email tags, E.164 phones, 8 socials and address. $0.002 per website (5 pages per site by default); unreachable sites are free"
+ },
+ {
+  "slug": "shopify-store-leads",
+  "title": "Shopify Leads",
+  "desc": "Shopify leads with 60+ installed apps and theme detected per store. Store name, myshopify domain, country, currency, product count, price range, vendors, activity, emails, phones and socials. Discover stores by niche keyword. $0.004 per store"
+ },
+ {
+  "slug": "local-business-leads",
+  "title": "Local Business Leads",
+  "desc": "Local business leads at $0.003 per place, including businesses with no website listed. Name, phone, website, email, address, hours, socials and coordinates from OpenStreetMap open data. 75+ types, no-website, phone and website filters, optional email enrichment"
+ },
+ {
+  "slug": "workday-jobs-scraper",
+  "title": "Workday Jobs Scraper",
+  "desc": "Workday jobs from 165+ verified employers or any myworkdayjobs.com site, verified by 64 passing tests. Keyword, location and posted-date filters, full descriptions, salary ranges, remote/hybrid, and only-new-jobs delta mode. $1 per 1,000 jobs"
+ },
+ {
+  "slug": "company-news-monitor",
+  "title": "Company News Monitor",
+  "desc": "Company news monitoring at $0.002 per article from 75 publisher RSS feeds (Bloomberg, CNBC, FT, TechCrunch, PR Newswire...) plus the GDELT news index when reachable. Track companies, domains or keywords. Deduped, event-tagged, delta mode for schedules"
+ },
+ {
+  "slug": "building-permits-leads",
+  "title": "Building Permits Leads",
+  "desc": "Building permits leads from official city open-data portals (Chicago, NYC, LA, SF, Seattle, Austin, Baton Rouge, Montgomery Co. MD, Cincinnati). Type, status, dates, valuation, property address, contractor business if published, source link; code violations too. Delta mode. $0.0015 per record"
+ },
+ {
+  "slug": "sitemap-link-inventory",
+  "title": "Sitemap Link Inventory",
+  "desc": "Find every sitemap for a domain (robots.txt, nested indexes, .gz, .txt, common paths) and return all URLs with lastmod, priority, images, hreflang, path groups and duplicates. Optional broken-link, redirect, noindex checks. Partial results never fail the run. $0.001 per sitemap file / link checked"
+ },
+ {
+  "slug": "developer-signals",
+  "title": "Hacker News, npm & PyPI Developer Signals",
+  "desc": "Track Hacker News mentions, Show HN and Launch HN posts, plus npm and PyPI package versions, repo links and download counts, in one dataset. Keyless public APIs. From $0.001 per item"
+ },
+ {
+  "slug": "sanctions-screening",
+  "title": "Sanctions Screening",
+  "desc": "Screen names of people, companies and vessels against the official OFAC SDN, OFAC Consolidated, UN, EU and UK sanctions lists. Fuzzy match handles diacritics, transliteration, word order and aliases; optional DOB and country. Screening aid, not legal advice. $0.004 per name"
+ },
+ {
+  "slug": "federal-grants-contracts",
+  "title": "Federal Grants & Contracts Finder",
+  "desc": "Open and forecasted federal grant opportunities from Grants.gov plus contract and grant awards from USAspending.gov, in one unified schema: deadlines, ceilings, amounts, agency, NAICS/PSC, recipient, and a link to the official record. No API key. $0.002 per opportunity, $0.0015 per award"
+ },
+ {
+  "slug": "amazon-product-search",
+  "title": "Amazon Product Search",
+  "desc": "Amazon product data at $0.004 per product, 20% below the alternative we tested (free plan), with 41 filled fields per product in that test. Search by keyword, URL or ASIN: price, list price, rating, reviews, Prime, badges, bought-in-past-month, images and specs. No login"
+ },
+ {
+  "slug": "linkedin-public-jobs",
+  "title": "LinkedIn Public Jobs Scraper (no login) | Salary & Level",
+  "desc": "28 filled fields per LinkedIn job vs 23 in our side-by-side test, at a lower price per job. Search public guest job listings with no login or cookies: keywords, location, date, remote/hybrid, level, type, company. Title, company, salary, seniority, industries, full description. Deduped"
+ },
+ {
+  "slug": "meta-ad-library",
+  "title": "Meta Ad Library Scraper",
+  "desc": "Image or video URL on 100% of ads vs 70% in our side-by-side test, at $0.00065 per ad. Search the public Meta Ad Library by keyword, advertiser Page id or library URL. No login. Flat rows: ad text, headline, link, CTA, media URLs, ISO dates, platforms, variations"
+ }
+]
