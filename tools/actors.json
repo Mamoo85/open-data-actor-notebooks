@@ -118,5 +118,30 @@
   "slug": "meta-ad-library",
   "title": "Meta Ad Library Scraper",
   "desc": "Image or video URL on 100% of ads vs 70% in our side-by-side test, at $0.00065 per ad. Search the public Meta Ad Library by keyword, advertiser Page id or library URL. No login. Flat rows: ad text, headline, link, CTA, media URLs, ISO dates, platforms, variations"
+ },
+ {
+  "slug": "google-maps-places-scraper",
+  "title": "Google Maps Scraper",
+  "desc": "Scrape Google Maps places by keyword and location: name, address, phone, website, rating, review count, hours, categories, coordinates, place URL. Optional website emails and socials, up to 5 reviews. No login. $1.50 per 1,000 places"
+ },
+ {
+  "slug": "tiktok-public-profile-scraper",
+  "title": "TikTok Profile Scraper",
+  "desc": "TikTok public profiles and latest posts: followers, likes, video count, bio, bio link, emails and links in bio, verified, business category, plus each recent video's plays, likes, comments, shares, saves, hashtags, music and engagement rate. Video URLs too. No login"
+ },
+ {
+  "slug": "youtube-comments-scraper",
+  "title": "YouTube Comments Scraper",
+  "desc": "Scrape public YouTube comments and replies from videos, Shorts, channels, playlists or searches: text, author, likes, reply count, creator heart, pinned, date. Top or newest, keyword/likes/date filters, monitor mode. No login"
+ },
+ {
+  "slug": "amazon-bestsellers",
+  "title": "Amazon Best Sellers Scraper",
+  "desc": "Amazon Best Sellers, New Releases, Movers & Shakers, Most Wished For and Gift Ideas ranks in 21 countries: rank, ASIN, title, price, rating, reviews, images, category path. Subcategory crawl, rank-change monitor, optional product details"
+ },
+ {
+  "slug": "sam-gov-opportunities",
+  "title": "SAM.gov Contract Opportunities",
+  "desc": "Get open federal contracts and government bids from SAM.gov: solicitations, RFPs, RFQs, sources sought and award notices with contracting officer email and phone, NAICS, PSC, set-aside, deadlines, full text and attachments. No API key needed; daily new-only monitor mode"
  }
 ]

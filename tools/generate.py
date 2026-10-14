@@ -69,6 +69,20 @@ CFG = {
  "from collections import Counter\ncnt=Counter(t['name'] for ts in df['technologies'] if isinstance(ts,list) for t in ts)\nprint('Most common technologies:',cnt.most_common(8))", None),
 "workday-jobs-scraper": (["company","title","location","country","remoteType","timeType","postedOn","salaryMin","salaryMax","salaryCurrency"],
  "for c in ['salaryMin','salaryMax']:\n    df[c]=pd.to_numeric(df[c],errors='coerce')\nprint(df.groupby('company').size().rename('roles in sample'))\nprint(df['remoteType'].value_counts(dropna=False))\ndf.groupby('company')[['salaryMin','salaryMax']].median()", None),
+"google-maps-places-scraper": (["title","categoryName","city","state","totalScore","reviewsCount","website","claimedByOwner","permanentlyClosed","rank"],
+ "for c in ['totalScore','reviewsCount']:\n    df[c]=pd.to_numeric(df[c],errors='coerce')\nprint(df['categoryName'].value_counts().head(8))\nprint('With a website:', int(df['website'].notna().sum()), 'of', len(df))\ndf.sort_values('reviewsCount',ascending=False)[['title','totalScore','reviewsCount']].head(10)",
+ "Phone numbers and emails are dropped before display; business name, category, rating and website are shown."),
+"tiktok-public-profile-scraper": (["account","createTimeISO","playCount","diggCount","commentCount","shareCount","engagementRate","isSponsored","text"],
+ "for c in ['playCount','diggCount','commentCount','shareCount']:\n    df[c]=pd.to_numeric(df[c],errors='coerce')\nprint(df[['playCount','diggCount','commentCount','shareCount']].describe().loc[['count','mean','max']])\ndf.sort_values('playCount',ascending=False)[['account','playCount','diggCount']].head(5)",
+ "Public posts of public accounts only. Contact columns (bio emails, linked socials) are dropped before display."),
+"youtube-comments-scraper": (["videoTitle","text","likeCount","replyCount","isReply","hasCreatorHeart","isPinned","publishedAtApprox"],
+ "for c in ['likeCount','replyCount']:\n    df[c]=pd.to_numeric(df[c],errors='coerce')\nprint('Comments:',len(df),'| mean likes:',round(df['likeCount'].mean(),1))\ndf.sort_values('likeCount',ascending=False)[['text','likeCount','replyCount']].head(5)",
+ "Commenter names, handles and channel links are dropped before display; comment text and engagement counts are shown."),
+"amazon-bestsellers": (["rank","asin","title","price","currency","stars","reviewsCount","listType","category","countryCode"],
+ "for c in ['rank','price','stars','reviewsCount']:\n    df[c]=pd.to_numeric(df[c],errors='coerce')\nprint(df.groupby('listType')['price'].agg(['count','median']))\ndf.sort_values('rank')[['rank','title','price','stars','reviewsCount']].head(10)", None),
+"sam-gov-opportunities": (["title","solicitationNumber","noticeType","postedDate","responseDeadline","department","naicsCode","pscCode","setAside","samUrl"],
+ "print(df['noticeType'].value_counts())\nprint(df['department'].value_counts().head(8))\ndf.sort_values('responseDeadline')[['title','department','responseDeadline']].head(10)",
+ "Contracting-officer names, emails and phone numbers are not displayed; notice-level fields only."),
 }
 
 # Columns whose name contains one of these are dropped from every DataFrame before display
@@ -120,6 +134,8 @@ print('Run status:', get('status', 'status'), '| items:', len(items))"""))
         pre += "df['hasContactPage'] = df['contactPageUrl'].notna()\n"
     if slug == "company-enrichment-by-domain":
         pre += "df['techCount'] = df['techStack'].apply(lambda t: t.get('count') if isinstance(t, dict) else None)\n"
+    if slug == "tiktok-public-profile-scraper":
+        pre += "df['account'] = df['authorMeta'].apply(lambda a: a.get('name') if isinstance(a, dict) else None)\n"
     if slug == "website-tech-stack-detector":
         pre += ("df['n_technologies'] = df['technologies'].apply(lambda t: len(t) if isinstance(t, list) else 0)\n"
                 "df['categories'] = df['categoriesSummary'].apply(lambda c: ', '.join(sorted(c)) if isinstance(c, dict) else '')\n"
